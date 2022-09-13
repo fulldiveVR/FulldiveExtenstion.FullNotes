@@ -20,6 +20,11 @@ buildscript {
         mavenLocal()
         google()
         mavenCentral()
+        maven {
+            url "http://office.fulldive.com:8083"
+            allowInsecureProtocol = true
+        }
+
         maven { url "https://plugins.gradle.org/m2/" }
     }
     dependencies {
@@ -36,6 +41,11 @@ allprojects {
     repositories {
         mavenLocal()
         mavenCentral()
+        maven {
+            url "http://office.fulldive.com:8083"
+            allowInsecureProtocol = true
+        }
+
         maven { url "https://jitpack.io" }
         maven { url "https://plugins.gradle.org/m2/" }
         google()
@@ -45,8 +55,8 @@ allprojects {
 apply plugin: 'org.sonarqube'
 sonarqube {
     properties {
-        property "sonar.projectName", "Omni Notes"
-        property "sonar.projectKey", "omni-notes"
+        property "sonar.projectName", "Full Notes"
+        property "sonar.projectKey", "Full-notes"
         property "sonar.organization", "federicoiosue-github"
         property 'sonar.projectVersion', project.VERSION_NAME
         property "sonar.host.url", "https://sonarcloud.io"
