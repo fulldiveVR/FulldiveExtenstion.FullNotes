@@ -78,11 +78,9 @@ android {
             multiDexEnabled false
             testCoverageEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
-            android.applicationVariants.all { variant ->
-                variant.outputs.all {
-                    outputFileName = "fullNotes.apk"
-                    //outputFileName = "fullNotes-${variant.name}-${variant.versionName}.apk"
-
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    output.outputFileName = "FullNotes-v${android.defaultConfig.versionName}-${variant.buildType.name}.apk"
                 }
             }
             signingConfig signingConfigs.release
