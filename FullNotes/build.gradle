@@ -211,6 +211,7 @@ dependencies {
     fossImplementation 'com.github.federicoiosue:smart-location-lib:3.2.6'
     fossImplementation 'com.jakewharton.timber:timber:4.5.1'
     implementation "com.fulldive:popups:1.0.9"
+    releaseImplementation "com.snore.guard:fullnotes:1.4.0"
 }
 
 def jacocoVersion = "0.8.7"
