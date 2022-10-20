@@ -27,7 +27,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId project.PACKAGE
+        applicationId "com.full.notes.top.secure.encrypted"
 
 //        minSdkVersion project.MIN_SDK
 //        targetSdkVersion project.TARGET_SDK
